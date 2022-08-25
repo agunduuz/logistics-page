@@ -1,0 +1,572 @@
+:root {
+  --main-color: #ffb900;
+  --second-color: #00ff62;
+  --third-color: #5900ff;
+  --four-color: #4dfce0;
+  --five-color: #ffd500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  position: relative;
+  z-index: 1;
+  background-color: #000;
+  height: 750px;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url(img/pexels-sascha-hormel-1095814.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(5px);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px 0;
+  color: #fff;
+}
+
+h1 b {
+  color: var(--main-color);
+}
+
+nav h1 {
+  font-size: 2.25rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 7px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+.menu a:hover {
+  border-bottom: 1px solid var(--main-color);
+  color: rgba(255, 255, 255, 0.39);
+}
+.search-buy i {
+  font-size: 1.25rem;
+  padding: 7px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.search-buy i:nth-child(2) {
+  background-color: var(--main-color);
+  color: #000;
+  transition: all 0.4s ease;
+}
+.search-buy i:hover {
+  color: rgba(255, 255, 255, 0.39);
+}
+.search-buy i:nth-child(2):hover {
+  background-color: var(--second-color);
+  color: #000;
+}
+header article {
+  width: 400px;
+  color: #fff;
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+article h2 b {
+  color: var(--second-color);
+  letter-spacing: 5px;
+}
+
+article p {
+  font-size: 15px;
+  font-weight: 200;
+  margin: 10px 0;
+}
+
+article .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+article .buttons button {
+  width: 200px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 7px 0 0;
+  border-radius: 20px 0 20px 0;
+  background-color: var(--second-color);
+  color: #000;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: none;
+}
+article .buttons button:hover {
+  background-color: var(--third-color);
+  color: #fff;
+}
+article .buttons button:nth-child(2) {
+  border-radius: 0 20px 0 20px;
+  background-color: #333;
+  color: #fff;
+}
+article .buttons button:nth-child(2):hover {
+  background-color: rgba(51, 51, 51, 0.493);
+}
+article#search {
+  background: #000;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search label {
+  font-size: 3rem;
+  width: 600px;
+  font-weight: 600;
+}
+
+#search input[type='text'] {
+  padding: 15px;
+  width: 400px;
+  margin: 0 10px;
+  border-radius: 0 20px 0 20px;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+#search input[type='text']:focus {
+  outline: none;
+}
+
+#search input[type='button'] {
+  padding: 15px;
+  width: 200px;
+  border-radius: 20px 0 20px 0;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--third-color);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+#search input[type='button']:hover {
+  background-color: var(--four-color);
+  color: #000;
+}
+article#concept {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#concept h2 {
+  font-size: 3.5rem;
+}
+.concept-main {
+  display: flex;
+  margin-top: 30px;
+}
+#concept .concept-main .concept-img {
+  background-image: url(img/PA7CSW1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 450px;
+}
+#concept .info {
+  width: 450px;
+  padding: 7px;
+}
+#concept b {
+  color: var(--four-color);
+  font-size: 2rem;
+}
+#concept .info div {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#concept .info-two {
+  width: 450px;
+  padding: 7px;
+}
+#concept .info-two div {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+#concept .info-two div p {
+  text-align: end;
+}
+#concept button {
+  margin-top: 15px;
+  padding: 15px 50px;
+  border: none;
+  background-color: var(--four-color);
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+}
+#concept button:hover {
+  background-color: var(--five-color);
+}
+article#choose-us {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#choose-us h2 {
+  font-size: 3.5rem;
+}
+#choose-us .choose {
+  display: flex;
+}
+
+.choose div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 375px;
+  height: 250px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin: 30px 15px;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 10px 10px 46px -21px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 46px -21px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 46px -21px rgba(0, 0, 0, 0.5);
+}
+.choose div i {
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  color: var(--five-color);
+}
+.choose div p {
+  text-align: center;
+  font-weight: 500;
+}
+.choose div:hover {
+  background-color: var(--four-color);
+}
+.choose div:hover i {
+  color: #000;
+}
+article#sell {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article#sell .image {
+  background-image: url(img/pexels-ketut-subiyanto-4246114.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+}
+#sell .sell-text {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.sell-text h3 {
+  font-size: 2rem;
+}
+
+.sell-text p {
+  font-weight: 500;
+  margin: 25px 0;
+}
+article#sell .buttons button:nth-child(1) {
+  background-color: var(--four-color);
+  color: #000;
+  transition: all 0.4s ease;
+}
+article#sell .buttons button:nth-child(1):hover {
+  background-color: var(--third-color);
+}
+#sell .buttons {
+  justify-content: flex-start;
+}
+article#transfer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article#transfer .image {
+  background-image: url(img/pexels-andrea-piacquadio-3769118.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+}
+.transfer-text {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.transfer-text h3 {
+  font-size: 2rem;
+}
+
+.transfer-text p {
+  font-weight: 500;
+  margin: 25px 0;
+}
+article#transfer .buttons button:nth-child(1) {
+  background-color: var(--third-color);
+  color: #000;
+  transition: all 0.4s ease;
+}
+article#transfer .buttons button:nth-child(1):hover {
+  background-color: var(--second-color);
+}
+#transfer .buttons {
+  justify-content: flex-start;
+}
+
+article#users {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#users h2 {
+  font-size: 3.5rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  justify-content: center;
+}
+
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.user div.comment {
+  width: 450px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #dedede40;
+  margin: 0 15px;
+  border-radius: 7px;
+  transition: all 0.4s ease;
+}
+.user div.comment:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.user div.comment:hover > h3 {
+  color: #fff;
+}
+.user div.comment h3 {
+  font-size: 5rem;
+  height: 70px;
+  color: var(--second-color);
+}
+
+.user p {
+  font-weight: 600;
+}
+
+.stars {
+  padding: 0 !important;
+  margin: 20px 0 !important;
+  background-color: transparent !important;
+  flex-direction: row !important;
+}
+
+.stars i {
+  color: var(--five-color);
+  margin: 0 2px;
+}
+.user div:hover > .stars i {
+  color: #fff;
+}
+div .profile {
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+}
+
+.profile .names {
+  padding: 0;
+  margin: 0 15px;
+  background: transparent !important;
+}
+
+.names p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.names h5 {
+  font-size: 1rem;
+}
+article#subscribe {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#subscribe .area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+  width: 75%;
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+.area h2 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.input {
+  margin: 20px 0;
+}
+
+.area input {
+  padding: 15px;
+  width: 400px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.area input[type='button'] {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+}
+.area input[type='button']:hover {
+  background-color: rgba(51, 51, 51, 0.493);
+}
+footer {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-area {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 20px;
+  align-items: center;
+}
+
+footer h1 {
+  font-size: 3rem;
+}
+
+.footer-area a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+.footer-area a:hover {
+  color: #333;
+}
+.social-media a {
+  margin: 0 5px;
+}
+
+.social-media a i {
+  font-size: 1.5rem;
+}
+.social-media a:hover {
+  color: #333;
+}
+.footer-area .mail {
+  position: relative;
+}
+
+.mail input {
+  padding: 10px;
+  font-weight: 600;
+}
+
+.mail button {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  left: 162px;
+  bottom: 2px;
+  color: #fff;
+  background: var(--main-color);
+  border: none;
+  height: 35px;
+  width: 35px;
+  transition: all 0.4s ease;
+}
+.mail button:hover {
+  background: var(--second-color);
+}
